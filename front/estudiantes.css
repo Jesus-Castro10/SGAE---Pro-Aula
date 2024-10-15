@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+body{
+    background-color: #B2C8BE;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.navbar{
+    box-sizing: border-box;
+    display: flex;
+    background-color: #F2EFE3;
+    border-radius: 5rem;
+    height: 3rem;
+    width: 50%;
+    margin: 1rem 25% 1rem 25%;
+    font-size: 1.3rem;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
+}
+a{
+    text-decoration: none;
+    color: #284353;
+    border-radius: 5rem;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+.navbar-estudiante{
+    background-color: #F38994;
+}
+a:hover{
+    background-color: #DBD7CC;
+    transition: all .3s ease;
+}
+.titulo-perfil-academico{
+    display: flex;
+    color: #F6F7FF;
+    background-color: #4F6C70;
+    border-radius: 1rem;
+    height: 4rem;
+    width: 90%;
+    margin: 0 5% 0 5%;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
+}
+.pin{
+    color: #FF7B93;
+    font-size: 2rem;
+}
+.estudiante{
+    color: #FAE9CF;
+    font-size: 2rem;
+}
+.titulo-perfil-academico-izquierda{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.titulo-perfil-academico-medio, .titulo-perfil-academico-derecha{
+    align-content: center;
+    width: 100%;
+    height: 100%;
+}
+.item1{
+    grid-area: foto-estudiante;
+}
+.item2{
+    grid-area: perfil-estudiante;
+}
+.item3{
+    grid-area: horarios;
+}
+.item4{
+    grid-area: asignaturas;
+}
+.item5{
+    grid-area: resultados-academicos;
+}
+.grid-container{
+    width: 90%;
+    height: 100%;
+    margin: 1.5rem 5% 0 5%;
+    text-align: center;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-areas: 
+    'foto-estudiante perfil-estudiante perfil-estudiante asignaturas'
+    'foto-estudiante horarios horarios asignaturas'
+    'resultados-academicos resultados-academicos resultados-academicos asignaturas'
+    ;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
+}
+.item1, .item2, .item3, .item4, .item5{
+    background-color: #F8EFE0;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #223E65;
+}
+.img-grid{
+    width: 10rem;
+    height: 10rem;
+}
