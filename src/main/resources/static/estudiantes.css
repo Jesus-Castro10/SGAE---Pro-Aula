@@ -2,7 +2,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+
     font-family: "Ubuntu", sans-serif;
 }
 body{
@@ -25,8 +25,8 @@ header{
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
 }
 a{
-    text-decoration: none !important;
-    color: #284353 !important;
+    text-decoration: none;
+    color: #284353;
     border-radius: 5rem;
     align-content: center;
     flex: 1;
@@ -100,12 +100,9 @@ a:hover{
     grid-area: horarios;
 }
 .item4{
-    grid-area: asignaturas;
-}
-.item5{
     grid-area: resultados-academicos;
 }
-.item6{
+.item5{
     grid-area: historial-academico;
 }
 .grid-container{
@@ -116,9 +113,9 @@ a:hover{
     display: grid;
     gap: 1.5rem;
     grid-template-areas: 
-    'foto-estudiante perfil-estudiante perfil-estudiante asignaturas'
-    'foto-estudiante resultados-academicos resultados-academicos asignaturas'
-    'horarios historial-academico historial-academico asignaturas'
+    'foto-estudiante resultados-academicos resultados-academicos horarios'
+    'foto-estudiante historial-academico historial-academico horarios'
+    'perfil-estudiante historial-academico historial-academico horarios'
     ;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
 }
@@ -130,6 +127,18 @@ a:hover{
     font-size: 1.5rem;
     color: #223E65;
     transition: all .3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 1rem 1rem 0.5rem 1rem;
+    max-height: 30vh;
+}
+.item1{
+    padding: 0;
+}
+.item3{
+    max-height: 50vh;
 }
 .item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .item6:hover{
     transform: scale(1.02);
@@ -137,4 +146,40 @@ a:hover{
 .img-grid{
     width: 10rem;
     height: 10rem;
+}
+.contenedor-tabla-historial-academico-titulo{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+.contenedor-tabla-historial-academico-titulo-derecha{
+    display: flex;
+    gap: .2rem;
+}
+.contenedor-tabla-historial-academico-titulo-derecha select{
+    border: none;
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: #223E65;
+    cursor: pointer;
+    background-color: #D7D5C8;
+}
+.contenedor-tablas-main{
+    width: 100%;
+    overflow: hidden;
+    background-color: #D7D5C8;
+    border-radius: 1rem;
+}
+.contenedor-tablas-main:hover, .contenedor-tabla-historial-academico-titulo-derecha select:hover{
+    background-color: #cac7b9;
+    transition: all .3s ease;
+}
+table{
+    width: max-content;
+}
+td, th{
+    padding: 0.5rem 1rem 0.5rem 0;
+    font-size: 1rem;
 }
