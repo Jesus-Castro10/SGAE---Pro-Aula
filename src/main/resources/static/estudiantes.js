@@ -1,3 +1,4 @@
+//cambiar colores del navbar
 const navbarCuenta = document.querySelector('.navbar-cuenta');
 const navbarEstudiante = document.querySelector('.navbar-estudiante');
 const navbarSoporte = document.querySelector('.navbar-soporte');
@@ -20,7 +21,7 @@ navbars.forEach(navbar => {
     });
 });
 
-
+//animacion del navbar cuando clickas
 const navLinks = document.querySelectorAll('.navbar a');
 const slider = document.querySelector('.slider');
 
@@ -29,3 +30,26 @@ navLinks.forEach((link, index) => {
         slider.style.left = `${index * 33.33}%`;
     });
 });
+
+//carrusel
+let indiceActual = 1;
+const apartado = document.querySelectorAll('.carrusel .grid-container');
+const totalApartados = apartado.length;
+
+function mostrarApartado(apartado) {
+    if (apartado >= totalApartados) {
+        indiceActual = 0;
+    } else if (apartado < 0) {
+        indiceActual = totalApartados - 1;
+    } else {
+        indiceActual = apartado;
+    }
+    const offset = -indiceActual * 100;
+    document.querySelector('.carrusel').style.transform = `translateX(${offset}%)`;
+}
+
+mostrarApartado(indiceActual);
+
+function carruselBotones(apartado) {
+    mostrarApartado(apartado);
+}

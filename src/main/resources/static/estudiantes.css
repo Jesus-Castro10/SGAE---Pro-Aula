@@ -13,6 +13,10 @@ header{
     flex-direction: column;
     text-align: center;
 }
+main{
+    width: 100%;
+    overflow: hidden;
+}
 .navbar{
     position: relative;
     display: flex;
@@ -90,6 +94,11 @@ a:hover{
     top: -6rem;
     height: 8rem;
 }
+.carrusel{
+    display: flex;
+    transition: transform 0.5s ease;
+    padding: 1rem 0 1rem 0;
+}
 .item1{
     grid-area: foto-estudiante;
 }
@@ -106,21 +115,22 @@ a:hover{
     grid-area: historial-academico;
 }
 .grid-container{
+    flex-shrink: 0;
     width: 90%;
     height: 100%;
-    margin: 1.5rem 5% 0 5%;
+    margin: 0 5% 0 5%;
     text-align: center;
     display: grid;
     gap: 1.5rem;
     grid-template-areas: 
-    'foto-estudiante resultados-academicos resultados-academicos horarios'
-    'foto-estudiante historial-academico historial-academico horarios'
-    'perfil-estudiante historial-academico historial-academico horarios'
+    'foto-estudiante resultados-academicos resultados-academicos resultados-academicos perfil-estudiante'
+    'horarios resultados-academicos resultados-academicos resultados-academicos perfil-estudiante'
+    'horarios historial-academico historial-academico historial-academico perfil-estudiante'
+    'horarios historial-academico historial-academico historial-academico perfil-estudiante'
     ;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
 }
-.item1, .item2, .item3, .item4, .item5, .item6{
-    position: relative;
+.item1, .item2, .item3, .item4, .item5{
     background-color: #F8EFE0;
     border-radius: 1rem;
     cursor: pointer;
@@ -131,14 +141,25 @@ a:hover{
     flex-direction: column;
     align-items: center;
     overflow: hidden;
-    padding: 1rem 1rem 0.5rem 1rem;
-    max-height: 30vh;
+    padding: 1rem;
 }
 .item1{
+    
     padding: 0;
+    max-height: 25vh;
+}
+.item2{
+    max-height: 66vh;
 }
 .item3{
-    max-height: 50vh;
+    max-height: 40vh;
+} 
+.item4{
+    max-height: 25vh;
+}
+.item5{
+    max-height: 35vh;
+    backface-visibility: hidden
 }
 .item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .item6:hover{
     transform: scale(1.02);
@@ -152,7 +173,7 @@ a:hover{
     width: 100%;
     justify-content: center;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
 }
 .contenedor-tabla-historial-academico-titulo-derecha{
     display: flex;
@@ -164,17 +185,18 @@ a:hover{
     background-color: transparent;
     color: #223E65;
     cursor: pointer;
-    background-color: #D7D5C8;
 }
 .contenedor-tablas-main{
     width: 100%;
     overflow: hidden;
     background-color: #D7D5C8;
     border-radius: 1rem;
+    border: 1px solid ;
+    margin-top: 1rem;
 }
 .contenedor-tablas-main:hover, .contenedor-tabla-historial-academico-titulo-derecha select:hover{
     background-color: #cac7b9;
-    transition: all .3s ease;
+    transition: transform 0.5s ease;
 }
 table{
     width: max-content;

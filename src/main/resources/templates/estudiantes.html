@@ -10,9 +10,9 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="#" class="navbar-cuenta">Cuenta</a>
-            <a href="#" class="navbar-estudiante">Estudiante</a>
-            <a href="#" class="navbar-soporte">Soporte</a>
+            <a href="#" onclick="carruselBotones(0)" class="navbar-cuenta">Cuenta</a>
+            <a href="#" onclick="carruselBotones(1)" class="navbar-estudiante">Estudiante</a>
+            <a href="#" onclick="carruselBotones(2)" class="navbar-soporte">Soporte</a>
             <div class="slider"></div>
         </nav>
         <div class="titulo-perfil-academico">
@@ -27,310 +27,432 @@
         </div>
     </header>
     <main>
-        <div class="grid-container">
-            <div class="item1">
-                <img src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-nerd-dibujados-mano_23-2151219098.jpg" class="img-grid">
+        <div class="carrusel">
+            <div class="grid-container">
+                <h1>cuenta</h1>
             </div>
-            <div class="item2">
-                <h4>Perfil</h4>
-                <div class="contenedor-tablas-main">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Docente
-                                </th>
-                                <th>
-                                    asignatura
-                                </th>
-                                <th>
-                                    1er periodo
-                                </th>
-                                <th>
-                                    2do periodo
-                                </th>
-                                <th>
-                                    3er periodo
-                                </th>
-                                <th>
-                                    4to periodo
-                                </th>
-                                <th>
-                                    definitiva
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="grid-container">
+                <div class="item1">
+                    <img src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-nerd-dibujados-mano_23-2151219098.jpg" class="img-grid">
                 </div>
-            </div>
-            <div class="item3">
-                <h4>Horarios</h4>
-                <br>
-                <div class="contenedor-tablas-main">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Hora
-                                </th>
-                                <th>
-                                    Lunes
-                                </th>
-                                <th>
-                                    Martes
-                                </th>
-                                <th>
-                                    Miercoles
-                                </th>
-                                <th>
-                                    Jueves
-                                </th>
-                                <th>
-                                    Viernes
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    6:30 - 7:30
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    7:30 - 8:30
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    8:30 - 9:30
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    9:30 - 10:00
-                                </td>
-                                <td>
-                                    Receso
-                                </td>
-                                <td>
-                                    Receso
-                                </td>
-                                <td>
-                                    Receso
-                                </td>
-                                <td>
-                                    Receso
-                                </td>
-                                <td>
-                                    Receso
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    10:00 - 11:00
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    11:00 - 12:00
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Matemáticas
-                                </td>
-                                <td>
-                                    Español
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            <div class="item4">
-                <h4>Resultados Academicos</h4>
-            </div>
-            <div class="item5">
-                <div class="contenedor-tabla-historial-academico-titulo">
-                    <i class="ph-bold ph-book-bookmark"></i>
-                    <h4>Historial Academico</h4>
-                    <div class="contenedor-tabla-historial-academico-titulo-derecha">
-                        <h6>Año academico:</h6>
-                        <select>
-                            <option >2024</option>
-                            <option >2023</option>
-                            <option >2022</option>
-                        </select>
+                <div class="item2">
+                    <h4>Perfil</h4>
+                    <div class="contenedor-tablas-main">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Docente
+                                    </th>
+                                    <th>
+                                        asignatura
+                                    </th>
+                                    <th>
+                                        1er periodo
+                                    </th>
+                                    <th>
+                                        2do periodo
+                                    </th>
+                                    <th>
+                                        3er periodo
+                                    </th>
+                                    <th>
+                                        4to periodo
+                                    </th>
+                                    <th>
+                                        definitiva
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <br>
-                <div class="contenedor-tablas-main">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>
-                                    Docente
-                                </th>
-                                <th>
-                                    asignatura
-                                </th>
-                                <th>
-                                    1er periodo
-                                </th>
-                                <th>
-                                    2do periodo
-                                </th>
-                                <th>
-                                    3er periodo
-                                </th>
-                                <th>
-                                    4to periodo
-                                </th>
-                                <th>
-                                    definitiva
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                                <td>
-                                    hola
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <div class="item3">
+                    <h4>Horario</h4>
+                    <div class="contenedor-tablas-main">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Hora
+                                    </th>
+                                    <th>
+                                        Lunes
+                                    </th>
+                                    <th>
+                                        Martes
+                                    </th>
+                                    <th>
+                                        Miercoles
+                                    </th>
+                                    <th>
+                                        Jueves
+                                    </th>
+                                    <th>
+                                        Viernes
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        6:30 - 7:30
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        7:30 - 8:30
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        8:30 - 9:30
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        9:30 - 10:00
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        10:00 - 11:00
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        11:00 - 12:00
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
+                <div class="item4">
+                    <h4>Resultados Academicos</h4>
+                    <div class="contenedor-tablas-main">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Docente
+                                    </th>
+                                    <th>
+                                        asignatura
+                                    </th>
+                                    <th>
+                                        1er periodo
+                                    </th>
+                                    <th>
+                                        2do periodo
+                                    </th>
+                                    <th>
+                                        3er periodo
+                                    </th>
+                                    <th>
+                                        4to periodo
+                                    </th>
+                                    <th>
+                                        definitiva
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item5">
+                    <div class="contenedor-tabla-historial-academico-titulo">
+                        <i class="ph-bold ph-book-bookmark"></i>
+                        <h4>Historial Academico</h4>
+                        <div class="contenedor-tabla-historial-academico-titulo-derecha">
+                            <h6>Año academico:</h6>
+                            <select>
+                                <option >2024</option>
+                                <option >2023</option>
+                                <option >2022</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="contenedor-tablas-main">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Docente
+                                    </th>
+                                    <th>
+                                        asignatura
+                                    </th>
+                                    <th>
+                                        1er periodo
+                                    </th>
+                                    <th>
+                                        2do periodo
+                                    </th>
+                                    <th>
+                                        3er periodo
+                                    </th>
+                                    <th>
+                                        4to periodo
+                                    </th>
+                                    <th>
+                                        definitiva
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-container">
+                <h1>sopolte</h1>
             </div>
         </div>
     </main>
