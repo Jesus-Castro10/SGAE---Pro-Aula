@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post">
+            <h2>INICIO DE SESIÓN</h2>
+            <div class="form">
+                <label for="cargo">
+                    <i class='bx bxs-select-multiple'></i>
+                    Cargo:
+                </label>
+                <select name="cargo" class="form-control" id="cargo" required>
+                    <option value="" disabled selected>Seleccione su Cargo</option>
+                     <option value="est">Estudiante</option>
+                     <option value="doc">Docente</option>
+                     <option value="acu">Acudiente</option>
+                     <option value="Sec">Secretaria Academica</option>
+                     <option value="coordi">Coordinador Academico</option>
+                     <option value="rect">Rector</option>
+                </select>
+                <label for="username">
+                    <i class='bx bxs-user'></i>
+                    Nombre de usuario:
+                </label>
+                <input type="text" id="username" class="form-control" placeholder="Ingrese el usuario" required>
+                
+                <label for="password">
+                    <i class='bx bxs-lock-alt' style='color:black'></i>
+                    Contraseña:
+                </label>
+                <input type="password" id="password" class="form-control" placeholder="Ingrese la contraseña" required>
+      
+            <button type="submit" class="btn">INGRESAR</button>
+        </div>
+            <div class="footer">
+                <p>¿Olvidaste tu contraseña? <a href="#">Recuperar</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
