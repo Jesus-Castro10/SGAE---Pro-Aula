@@ -2,11 +2,12 @@
 *{
     margin: 0;
     padding: 0;
-
     font-family: "Ubuntu", sans-serif;
 }
 body{
     background-color: #B2C8BE;
+    position: relative;
+    height: 100vh;
 }
 header{
     display: flex;
@@ -130,7 +131,7 @@ a:hover{
     ;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
 }
-.item1, .item2, .item3, .item4, .item5{
+.item1, .item2, .item3, .item4, .item5, .contenedor-apartados-grid{
     background-color: #F8EFE0;
     border-radius: 1rem;
     cursor: pointer;
@@ -196,7 +197,7 @@ a:hover{
 }
 .contenedor-tablas-main:hover, .contenedor-tabla-historial-academico-titulo-derecha select:hover{
     background-color: #cac7b9;
-    transition: transform 0.5s ease;
+    transition: transform .5s ease;
 }
 table{
     width: max-content;
@@ -204,4 +205,36 @@ table{
 td, th{
     padding: 0.5rem 1rem 0.5rem 0;
     font-size: 1rem;
+    text-align: center;
+}
+.fondo-apartados-grid{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .8);
+    backdrop-filter: blur(1px);
+    display: none;
+}
+.cerrar-fondo-apartados-grid{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: .7rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: rgba(181, 173, 173, 0.8);
+    border-radius: .5rem;
+    transition: all .3s ease;
+}
+.cerrar-fondo-apartados-grid:hover{
+    background-color: rgba(186, 203, 193, 1);
+    color: #b81d2d;
+}
+.contenedor-apartados-grid{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

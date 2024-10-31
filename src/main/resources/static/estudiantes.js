@@ -21,6 +21,7 @@ navbars.forEach(navbar => {
     });
 });
 
+
 //animacion del navbar cuando clickas
 const navLinks = document.querySelectorAll('.navbar a');
 const slider = document.querySelector('.slider');
@@ -30,6 +31,7 @@ navLinks.forEach((link, index) => {
         slider.style.left = `${index * 33.33}%`;
     });
 });
+
 
 //carrusel
 let indiceActual = 1;
@@ -44,8 +46,8 @@ function mostrarApartado(apartado) {
     } else {
         indiceActual = apartado;
     }
-    const offset = -indiceActual * 100;
-    document.querySelector('.carrusel').style.transform = `translateX(${offset}%)`;
+    const desplazar = -indiceActual * 100;
+    document.querySelector('.carrusel').style.transform = `translateX(${desplazar}%)`;
 }
 
 mostrarApartado(indiceActual);
@@ -53,3 +55,23 @@ mostrarApartado(indiceActual);
 function carruselBotones(apartado) {
     mostrarApartado(apartado);
 }
+
+
+//ampliar y quitar apartados 
+let apartadosGrid = document.querySelectorAll('.contenedor-tablas-main');
+let fondoApartados = document.querySelector('.fondo-apartados-grid');
+let cerrar = document.querySelector('.cerrar-fondo-apartados-grid');
+let contenedor = document.querySelector('.contenedor-apartados-grid');
+
+apartadosGrid.forEach(apartado => {
+    apartado.addEventListener('click', () => {
+        fondoApartados.style.display = 'block';
+        let copiaApartado = apartado.cloneNode(true);
+        copiaApartado.removeEventListener('click', null);
+        contenedor.appendChild(copiaApartado);
+    });
+    cerrar.addEventListener('click', () => {
+        fondoApartados.style.display = 'none';
+        contenedor.innerHTML = '';
+    });
+});
