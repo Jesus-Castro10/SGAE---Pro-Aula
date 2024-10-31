@@ -48,6 +48,18 @@ h2 {
     margin-right: 8px;
     color: black;
 }
+.show { 
+    display: flex; 
+    align-items: center; 
+    margin-bottom: 10px; 
+} 
+.show input[type="checkbox"] { 
+    margin-right: 1px; 
+    cursor: pointer;
+}
+.show label{
+    font-size: smaller;
+}
 
 select {
     padding: 10px;
@@ -73,7 +85,7 @@ option {
 
 input[type="text"], input[type="password"], input[type="email"] {
     padding: 8px;
-    border: 1.5px solid white;
+    border: 1px solid #ccc;
     border-radius: 20px;
     font-size: 15px;
     background-color: rgba(255, 255, 255, 0.8);
@@ -124,6 +136,11 @@ input[type="text"]::placeholder, input[type="password"]::placeholder, input[type
     color: purple;
     text-decoration: underline;
 }
+
+#Recuperar-cuenta {
+    display: none; 
+}
+
 
 @media (max-width: 768px) {
     body {
