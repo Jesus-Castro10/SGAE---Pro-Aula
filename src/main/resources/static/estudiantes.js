@@ -75,3 +75,23 @@ apartadosGrid.forEach(apartado => {
         contenedor.innerHTML = '';
     });
 });
+
+let cambiarContraseña = document.querySelector('.item1');
+let mostrarCambiarContraseña = document.querySelector('.contenedor-cambiar-contraseña');
+let cerrarSesion = document.querySelector('.item2');
+let mostrarCerrarSesion = document.querySelector('.contenedor-cerrar-sesion');
+
+cambiarContraseña.addEventListener('click', () => {
+    fondoApartados.style.display = 'block';
+    contenedor.append(mostrarCambiarContraseña);
+    mostrarCambiarContraseña.style.display = 'block';
+});
+cerrarSesion.addEventListener('click', () => {
+    fondoApartados.style.display = 'block';
+    contenedor.append(mostrarCerrarSesion);
+    mostrarCerrarSesion.style.display = 'block';
+});
+cerrar.addEventListener('click', () => {
+    fondoApartados.style.display = 'none';
+    contenedor.innerHTML = '';
+});
