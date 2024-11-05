@@ -71,18 +71,27 @@ a:hover{
 .titulo-perfil-academico-izquierda{
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+    padding-left: 1rem;
     width: 100%;
     height: 100%;
 }
-.pin{
-    color: #FF7B93;
-    font-size: 2rem;
+.titulo-perfil-academico-izquierda span{
+    font-size: 4rem;
 }
-.estudiante{
-    color: #FAE9CF;
-    font-size: 2rem;
+.titulo-perfil-academico-izquierda span:first-child{
+    color: #FE7A94;
+}
+.titulo-perfil-academico-izquierda span:nth-child(2){
+    color: #F8E8CE;
+}
+.pin{
+    left: 18%;
+    position: absolute;
+    top: -1.5rem;
+    font-size: 3rem;
+    color: #F98A96;
 }
 .titulo-perfil-academico-medio, .titulo-perfil-academico-derecha{
     align-content: center;
@@ -225,6 +234,8 @@ a:hover{
     align-items: center;
     overflow: hidden;
     padding: 1rem;
+    position: relative;
+    backface-visibility: hidden;
 }
 .item3{
     padding: 0;
@@ -246,18 +257,110 @@ a:hover{
 .item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .item6:hover, .item7:hover, .item8:hover, .item9:hover, .item10:hover{
     transform: scale(1.02);
 }
+.item3 .contenedor-tablas-main{
+    border: none;
+    margin: 0;
+    background-color: transparent;
+}
 .img-grid{
-    width: 10rem;
-    height: 10rem;
+    width: 15rem;
+}
+.informacion-top-puntos{
+    position: absolute;
+    top: -5px;
+    left: 3%;
+    font-size: 2rem;
+}
+.informacion-top-puntos span:first-child{
+    color: #F82E2B;
+}
+.informacion-top-puntos span:nth-child(2){
+    color: #B28D21;
+}
+.informacion-top-puntos span:last-child{
+    color: #539279;
+}
+.informacion-top{
+    top: 5%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: #A2B5B1;
+    border: 1px solid #9A9B94;
+    padding: .5rem 0 .5rem 0;
+    color: #F7F5F6;
+}
+.item4 .contenedor-tablas-main{
+    margin-top: 4rem;
+}
+.contenedor-datos{
+    display: flex;
+    flex-direction: column;
+    row-gap: .5rem;
+    width: 100%;
+    text-align: left;
+}
+.contenedor-datos h4{
+    width: 100%;
+    background-color: #B9C2BF;
+    border: 1px solid #8E897F;
+    border-radius: .5rem;
+    border-left: none;
+    padding-left: .3rem;
+}
+.contenedor-apartados-informacion-personal-span{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #8E897F;
+    border-left: none;
+    border-top: none;
+    border-radius: .5rem;
+    padding: .5rem .5rem .5rem .5rem;
+}
+.contenedor-apartados-informacion-personal, .contenedor-apartados-informacion-contacto{
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    row-gap: .2rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.color-fondo-horario{
+    background-color: #FB8690;
+    width: 100%;
+    height: 18%;
+    color: #FCF6F1;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+.c{
+    position: absolute;
+    color: #414652;
+    z-index: 1;
+    white-space: nowrap;
+    top: -1.7rem;
+    font-size: 3rem;
+}
+.item5 .contenedor-tablas-main{
+    border: 1px solid #8E9587;
+}
+.item5 h4{
+    color: #FCF6F1;
+    z-index: 1;
 }
 .contenedor-tablas-main{
     width: 100%;
     overflow: hidden;
     background-color: #D7D5C8;
+    justify-items: center;
     border-radius: 1rem;
-    border: 1px solid ;
+    border: 1px solid;
     margin-top: 1rem;
     transition: transform .5s ease;
+    
 }
 .contenedor-tabla-historial-academico-titulo{
     display: flex;
@@ -281,27 +384,41 @@ a:hover{
 .contenedor-tablas-main:hover, .contenedor-tabla-historial-academico-titulo-derecha select:hover{
     background-color: #cac7b9;
 }
-.contenedor-datos{
-    display: flex;
-    flex-direction: column;
-    row-gap: .5rem;
-    width: 100%;
-    text-align: left;
-}
-.contenedor-apartados-informacion-personal, .contenedor-apartados-informacion-contacto{
-    row-gap: .5rem;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 1rem;
-}
 table{
     width: max-content;
+    text-align: center;
+}
+.tabla-horario{
+    border-collapse: collapse;
 }
 td, th{
-    padding: 0.5rem 1rem 0.5rem 0;
+    padding: 0.5rem .5rem 0.5rem .5rem;
     font-size: 1rem;
-    text-align: center;
+}
+.tabla-horario th{
+    background-color: #BECBC2;
+}
+.tabla-horario th, .tabla-horario td{
+    border: 1px solid #9B9583;
+}
+.tabla-horario tr td:not(:first-child){
+    background-color: #DFD7C3;
+    color: #413B39;
+}
+.tabla-horario tr td:first-child{
+    color: #DDDED7;
+}
+.tabla-resultado-academico{
+    width: 100%;
+    background-color: #FFFFFF;
+    color: #010F3F;
+    border-collapse: collapse;
+}
+.tabla-resultado-academico, .tabla-resultado-academico th, .tabla-resultado-academico td{
+    border: 1px solid #237CBA;
+}
+.tabla-resultado-academico th{
+    background-color: #7EBAF7;
 }
 .fondo-apartados-grid{
     position: absolute;
@@ -329,8 +446,30 @@ td, th{
     color: #b81d2d;
 }
 .contenedor-apartados-grid{
+    cursor: default;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    max-height: 85vh;
+}
+::-webkit-scrollbar{
+    width: 12px;
+    height: 10px;
+}
+::-webkit-scrollbar-track{
+    border: 1px solid #010F3F;
+    background-color: #FFFFFF;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+    border: 1px solid #010F3F;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #010F3F;
+    border: 2px solid #f0f0f0;
+    border-top-right-radius: 5rem;
+    border-bottom-right-radius: 5rem;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #7EBAF7;
 }

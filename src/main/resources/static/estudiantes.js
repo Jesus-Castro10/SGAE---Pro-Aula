@@ -66,13 +66,19 @@ let contenedor = document.querySelector('.contenedor-apartados-grid');
 apartadosGrid.forEach(apartado => {
     apartado.addEventListener('click', () => {
         fondoApartados.style.display = 'block';
+        apartado.style.overflowY = 'auto';
+        apartado.style.overflowX = 'auto';
+        apartado.style.perspective = '1000000px';
         let copiaApartado = apartado.cloneNode(true);
         copiaApartado.removeEventListener('click', null);
+        copiaApartado.style.cursor = 'default';
         contenedor.appendChild(copiaApartado);
     });
     cerrar.addEventListener('click', () => {
-        fondoApartados.style.display = 'none';
+        apartado.style.overflowY = 'hidden';
+        apartado.style.overflowX = 'hidden';
         contenedor.innerHTML = '';
+        fondoApartados.style.display = 'none';
     });
 });
 
@@ -80,6 +86,7 @@ let cambiarContraseña = document.querySelector('.item1');
 let mostrarCambiarContraseña = document.querySelector('.contenedor-cambiar-contraseña');
 let cerrarSesion = document.querySelector('.item2');
 let mostrarCerrarSesion = document.querySelector('.contenedor-cerrar-sesion');
+let noCerrarSesion = document.querySelector('.boton-no-cerrar-sesion');
 
 cambiarContraseña.addEventListener('click', () => {
     fondoApartados.style.display = 'block';
@@ -92,6 +99,10 @@ cerrarSesion.addEventListener('click', () => {
     mostrarCerrarSesion.style.display = 'block';
 });
 cerrar.addEventListener('click', () => {
+    fondoApartados.style.display = 'none';
+    contenedor.innerHTML = '';
+});
+noCerrarSesion.addEventListener('click', () => {
     fondoApartados.style.display = 'none';
     contenedor.innerHTML = '';
 });

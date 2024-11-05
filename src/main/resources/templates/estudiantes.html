@@ -17,8 +17,9 @@
         </nav>
         <div class="titulo-perfil-academico">
             <div class="titulo-perfil-academico-izquierda">
-                <i class="ph ph-push-pin pin"></i>
-                <i class="ph ph-student estudiante"></i>
+                <span>•</span>
+                <span>•</span>
+                <i class="ph-fill ph-map-pin pin"></i>
                 <h2>Nombre Estudiante</h2>
             </div>
             <h1 class="titulo-perfil-academico-medio">Perfil academico</h1>
@@ -38,9 +39,9 @@
                         <h4>Cambiar contraseña</h4>
                         <p class="obligacion-contraseña">La contraseña debe contener al menos 8 caracteres</p>
                         <form method="post" class="formulario-cambiar-contraseña">
-                            <input type="password" placeholder="Contraseña actual" required>
-                            <input type="password" placeholder="Contraseña nueva" required>
-                            <input type="password" placeholder="Repetir contraseña nueva" required>
+                            <input type="password" placeholder="Contraseña actual" minlength="8" required>
+                            <input type="password" placeholder="Contraseña nueva" minlength="8" required>
+                            <input type="password" placeholder="Repetir contraseña nueva" minlength="8" required>
                             <button>Cambiar Contraseña</button>
                         </form>
                     </div>
@@ -57,33 +58,48 @@
             </div>
             <div class="grid-container">
                 <div class="item3">
-                    <img src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-nerd-dibujados-mano_23-2151219098.jpg" class="img-grid">
+                    <div class="contenedor-tablas-main">
+                        <img src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-nerd-dibujados-mano_23-2151219098.jpg" class="img-grid">
+                    </div>
                 </div>
                 <div class="item4">
-                    <h4>Datos</h4>
+                    <div class="informacion-top-puntos">
+                        <span>•</span>
+                        <span>•</span>
+                        <span>•</span>
+                    </div>
+                    <div class="informacion-top">
+                        <h4>Información</h4>
+                    </div>
                     <div class="contenedor-tablas-main">
                         <div class="contenedor-datos">
                             <div class="contenedor-apartados-informacion-personal">
                                 <h4>Información personal</h4>
-                                <span>Nombre Completo:</span>
-                                <span>Número de identificación:</span>
-                                <span>Fecha de nacimiento:</span>
-                                <span>Edad:</span>
-                                <span>Género:</span>
+                                <div class="contenedor-apartados-informacion-personal-span">
+                                    <span>Nombre Completo:</span>
+                                    <span>Número de identificación:</span>
+                                    <span>Fecha de nacimiento:</span>
+                                    <span>Edad:</span>
+                                    <span>Género:</span>
+                                </div>
                             </div>
                             <div class="contenedor-apartados-informacion-contacto">
                                 <h4>Información de contacto</h4>
-                                <span>Correo electronico:</span>
-                                <span>Teléfono de contacto:</span>
-                                <span>Dirección de residencia:</span>
+                                <div class="contenedor-apartados-informacion-personal-span">
+                                    <span>Correo electronico:</span>
+                                    <span>Teléfono de contacto:</span>
+                                    <span>Dirección de residencia:</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="item5">
+                    <div class="c">C C C C C C C C</div>
+                    <div class="color-fondo-horario"></div>
                     <h4>Horario</h4>
                     <div class="contenedor-tablas-main">
-                        <table>
+                        <table class="tabla-horario">
                             <thead>
                                 <tr>
                                     <th>
@@ -108,7 +124,7 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>
+                                    <td style="background-color: #D1BFB0;">
                                         6:30 - 7:30
                                     </td>
                                     <td>
@@ -128,7 +144,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="background-color: #E4B0AB;">
                                         7:30 - 8:30
                                     </td>
                                     <td>
@@ -148,7 +164,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="background-color: #D3BB95;">
                                         8:30 - 9:30
                                     </td>
                                     <td>
@@ -168,7 +184,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="background-color: #AFC0B8;">
                                         9:30 - 10:00
                                     </td>
                                     <td>
@@ -188,7 +204,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="background-color: #D3BB95;">
                                         10:00 - 11:00
                                     </td>
                                     <td>
@@ -208,7 +224,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td style="background-color: #E5B2AA;">
                                         11:00 - 12:00
                                     </td>
                                     <td>
@@ -234,105 +250,173 @@
                 <div class="item6">
                     <h4>Resultados Academicos</h4>
                     <div class="contenedor-tablas-main">
-                        <table>
+                        <table class="tabla-resultado-academico">
                             <thead>
                                 <tr>
-                                    <th>
-                                        Docente
-                                    </th>
-                                    <th>
-                                        asignatura
-                                    </th>
-                                    <th>
-                                        1er periodo
-                                    </th>
-                                    <th>
-                                        2do periodo
-                                    </th>
-                                    <th>
-                                        3er periodo
-                                    </th>
-                                    <th>
-                                        4to periodo
-                                    </th>
-                                    <th>
-                                        definitiva
-                                    </th>
+                                    <th>Docente</th>
+                                    <th>asignatura</th>
+                                    <th>I.H.</th>
+                                    <th>FLL</th>
+                                    <th>Per. 1</th>
+                                    <th>Per. 2</th>
+                                    <th>Per. 3</th>
+                                    <th>Per. 4</th>
+                                    <th>definitiva</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
+                                    <th colspan="9" style="text-align: left;">HUMANIDADES: LENGUA CASTELLANA E INGLÉS</th>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
+                                    <td></td>
+                                    <td>Lengua castellana</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
+                                    <td></td>
+                                    <td>Inglés</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
+                                    <th colspan="9" style="text-align: left;">MATEMÁTICAS</th>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
-                                    <td>
-                                        hola
-                                    </td>
+                                    <td></td>
+                                    <td>Matemáticas</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Geometría</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Estadistica</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">CIENCIAS SOCIALES, HISTORIA, GEOGRAFÍA. CONSTITUCIÓN POLÍTICA Y DEMOCRACIA</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sociales Cívica y Urbanidad</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Economía y política</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">CIENCIAS NATURALES Y ED. AMBIENTAL</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Química</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Ciencias naturales</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">EDUCACIÓN ARTÍSTICA Y CULTURAL</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Artística</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">TECNOLOGÍA E INFORMÁTICA</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Tecnología e informática</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">EDUCACIÓN FÍSICA RECREACIÓN Y DEPORTES</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Educación Fisica</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
                                 </tr>
                             </tbody>
                         </table>
