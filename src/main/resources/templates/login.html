@@ -47,38 +47,48 @@
                     <button type="submit" class="btn">INGRESAR</button>
                 </div>
                 <div class="footer">
-                    <p>¿Olvidaste tu contraseña? <a href="#" onclick="RecuperarContraseña()">Recuperar</a></p>
-                </div>
-            </form>
-        </div>
-
-        <div id="Recuperar-cuenta" class="container">
-            <form class="user">
-                <h2>CUENTA DE USUARIO</h2>
-                <div class="form">
-                    <label for="user">
-                        <i class='bx bxs-user'></i>
-                        Nombre de usuario
-                    </label>
-                    <input type="text" id="user" placeholder="Ingrese su Nombre" required>
-                    <button type="button" onclick="buscarusuario" class="btn">CONSULTAR</button>
-                </div>
-            </form>
-
-            <h2>RECUPERAR CUENTA</h2>
-            <form class="email">
-                <div class="form">
-                    <label for="email">
-                        <i class='bx bxs-envelope'></i>
-                        Correo electrónico:
-                    </label>
-                    <input type="email" id="email" readonly>
-                    <button type="submit" class="btn">ENVIAR</button>
+                    <p>¿Olvidaste tu contraseña? <a href="#" onclick="mostrarRecuperarCuenta()">Recuperar</a></p>
                 </div>
             </form>
         </div>
     </div>
+
+    <div id="recuperar-cuenta" class="container" style="display: none;">
+        <form class="user">
+            <h2>CUENTA DE USUARIO</h2>
+            <div class="form">
+                <label for="user">
+                    <i class='bx bxs-user'></i>
+                    Nombre de usuario
+                </label>
+                <input type="text" id="user" placeholder="Ingrese su Nombre" required>
+                <button type="button" onclick="buscarUsuario()" class="btn">CONSULTAR</button>
+            </div>
+        </form>
+
+        <h2>RECUPERAR CUENTA</h2>
+        <form class="email">
+            <div class="form">
+                <label for="email">
+                    <i class='bx bxs-envelope'></i>
+                    Correo electrónico:
+                </label>
+                <input type="email" id="email" readonly>
+                <button type="submit" class="btn">ENVIAR</button>
+            </div>
+        </form>
+    </div>
     <script src="../static/login.js"></script>
+    <script>
+        function mostrarRecuperarCuenta() {
+            document.getElementById('login-container').style.display = 'none';
+            document.getElementById('recuperar-cuenta').style.display = 'block';
+        }
+
+        function buscarUsuario() {
+            // Lógica para buscar usuario
+        }
+    </script>
 </body>
 
 </html>
