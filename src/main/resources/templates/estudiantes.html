@@ -12,51 +12,535 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="#" class="navbar-cuenta">Cuenta</a>
-            <a href="#" class="navbar-estudiante">Estudiante</a>
-            <a href="#" class="navbar-soporte">Soporte</a>
+            <a href="#" onclick="carruselBotones(0)" class="navbar-cuenta">Cuenta</a>
+            <a href="#" onclick="carruselBotones(1)" class="navbar-estudiante">Estudiante</a>
+            <a href="#" onclick="carruselBotones(2)" class="navbar-soporte">Soporte</a>
             <div class="slider"></div>
         </nav>
         <div class="titulo-perfil-academico">
             <div class="titulo-perfil-academico-izquierda">
-                <i class="ph ph-push-pin pin"></i>
-                <i class="ph ph-student estudiante"></i>
+                <span>•</span>
+                <span>•</span>
+                <i class="ph-fill ph-map-pin pin"></i>
                 <h2>Nombre Estudiante</h2>
             </div>
             <h1 class="titulo-perfil-academico-medio">Perfil academico</h1>
             <h2 class="titulo-perfil-academico-derecha">Curso</h2>
             <img src="/src/main/resources/static/img/sentada2.png" class="titulo-perfil-academico-img">
+            <h2 class="titulo-perfil-academico-derecha">Grado</h2>
+            <img src="sentada2.png" class="titulo-perfil-academico-img">
         </div>
     </header>
     <main>
-        <div class="grid-container">
-            <div class="item1">
-                <img src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-nerd-dibujados-mano_23-2151219098.jpg"
-                    class="img-grid">
+        <div class="carrusel">
+            <div class="grid-container">
+                <div class="item1">
+                    <h4>Cambiar contraseña</h4>
+
+                    <i class="ph-duotone ph-lock-key cuenta-sticker-opciones"></i>
+
+                    <div class="contenedor-cambiar-contraseña">
+                        <h4>Cambiar contraseña</h4>
+                        <p class="obligacion-contraseña">La contraseña debe contener al menos 8 caracteres</p>
+                        <form method="post" class="formulario-cambiar-contraseña">
+                            <input type="password" placeholder="Contraseña actual" minlength="8" required>
+                            <input type="password" placeholder="Contraseña nueva" minlength="8" required>
+                            <input type="password" placeholder="Repetir contraseña nueva" minlength="8" required>
+                            <button>Cambiar Contraseña</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="item2">
+                    <h4>Cerrar sesión</h4>
+                    <i class="ph-duotone ph-sign-out cuenta-sticker-opciones"></i>
+                    <div class="contenedor-cerrar-sesion">
+                        <h4>¿Salir de la sesión?</h4>
+                        <button class="boton-no-cerrar-sesion">No</button>
+                        <button class="boton-si-cerrar-sesion">Sí</button>
+                    </div>
+                </div>
             </div>
-            <div class="item2">
-                <h4>Perfil</h4>
-                <div></div>
+            <div class="grid-container">
+                <div class="item3">
+                    <div class="contenedor-tablas-main">
+                        <img src="https://img.freepik.com/vector-gratis/ilustracion-dibujos-animados-nerd-dibujados-mano_23-2151219098.jpg"
+                            class="img-grid">
+                    </div>
+                </div>
+                <div class="item4">
+                    <div class="informacion-top-puntos">
+                        <span>•</span>
+                        <span>•</span>
+                        <span>•</span>
+                    </div>
+                    <div class="informacion-top">
+                        <h4>Información</h4>
+                    </div>
+                    <div class="contenedor-tablas-main">
+                        <div class="contenedor-datos">
+                            <div class="contenedor-apartados-informacion-personal">
+                                <h4>Información personal</h4>
+                                <div class="contenedor-apartados-informacion-personal-span">
+                                    <span>Nombre Completo:</span>
+                                    <span>Número de identificación:</span>
+                                    <span>Fecha de nacimiento:</span>
+                                    <span>Edad:</span>
+                                    <span>Género:</span>
+                                </div>
+                            </div>
+                            <div class="contenedor-apartados-informacion-contacto">
+                                <h4>Información de contacto</h4>
+                                <div class="contenedor-apartados-informacion-personal-span">
+                                    <span>Correo electronico:</span>
+                                    <span>Teléfono de contacto:</span>
+                                    <span>Dirección de residencia:</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item5">
+                    <div class="c">C C C C C C C C</div>
+                    <div class="color-fondo-horario"></div>
+                    <h4>Horario</h4>
+                    <div class="contenedor-tablas-main">
+                        <table class="tabla-horario">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Hora
+                                    </th>
+                                    <th>
+                                        Lunes
+                                    </th>
+                                    <th>
+                                        Martes
+                                    </th>
+                                    <th>
+                                        Miercoles
+                                    </th>
+                                    <th>
+                                        Jueves
+                                    </th>
+                                    <th>
+                                        Viernes
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="background-color: #D1BFB0;">
+                                        6:30 - 7:30
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #E4B0AB;">
+                                        7:30 - 8:30
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #D3BB95;">
+                                        8:30 - 9:30
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #AFC0B8;">
+                                        9:30 - 10:00
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                    <td>
+                                        Receso
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #D3BB95;">
+                                        10:00 - 11:00
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color: #E5B2AA;">
+                                        11:00 - 12:00
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Matemáticas
+                                    </td>
+                                    <td>
+                                        Español
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item6">
+                    <h4>Resultados Academicos</h4>
+                    <div class="contenedor-tablas-main">
+                        <table class="tabla-resultado-academico">
+                            <thead>
+                                <tr>
+                                    <th>Docente</th>
+                                    <th>asignatura</th>
+                                    <th>I.H.</th>
+                                    <th>FLL</th>
+                                    <th>Per. 1</th>
+                                    <th>Per. 2</th>
+                                    <th>Per. 3</th>
+                                    <th>Per. 4</th>
+                                    <th>definitiva</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">HUMANIDADES: LENGUA CASTELLANA E INGLÉS
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Lengua castellana</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Inglés</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">MATEMÁTICAS</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Matemáticas</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Geometría</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Estadistica</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">CIENCIAS SOCIALES, HISTORIA, GEOGRAFÍA.
+                                        CONSTITUCIÓN POLÍTICA Y DEMOCRACIA</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Sociales Cívica y Urbanidad</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Economía y política</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">CIENCIAS NATURALES Y ED. AMBIENTAL</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Química</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Ciencias naturales</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">EDUCACIÓN ARTÍSTICA Y CULTURAL</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Artística</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">TECNOLOGÍA E INFORMÁTICA</th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Tecnología e informática</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="9" style="text-align: left;">EDUCACIÓN FÍSICA RECREACIÓN Y DEPORTES
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td>Educación Fisica</td>
+                                    <td>5</td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3.0</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="item7">
+                    <div class="contenedor-tabla-historial-academico-titulo">
+                        <i class="ph-bold ph-book-bookmark"></i>
+                        <h4>Historial Academico</h4>
+                        <div class="contenedor-tabla-historial-academico-titulo-derecha">
+                            <h6>Año academico:</h6>
+                            <select>
+                                <option>2024</option>
+                                <option>2023</option>
+                                <option>2022</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="contenedor-tablas-main">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>
+                                        Docente
+                                    </th>
+                                    <th>
+                                        asignatura
+                                    </th>
+                                    <th>
+                                        1er periodo
+                                    </th>
+                                    <th>
+                                        2do periodo
+                                    </th>
+                                    <th>
+                                        3er periodo
+                                    </th>
+                                    <th>
+                                        4to periodo
+                                    </th>
+                                    <th>
+                                        definitiva
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                    <td>
+                                        hola
+                                    </td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-            <div class="item3">
-                <h4>Horarios</h4>
-                <div></div>
-            </div>
-            <div class="item4">
-                <h4>Asignaturas</h4>
-                <div></div>
-            </div>
-            <div class="item5">
-                <h4>Resultados Academicos</h4>
-                <div></div>
-            </div>
-            <div class="item6">
-                <h4>Historial Academico</h4>
-                <div></div>
+            <div class="grid-container">
+                <div class="item8">
+                    <h4>Preguntas frecuentes</h4>
+                </div>
+                <div class="item9">
+                    <h4>Contactar</h4>
+                    <!-- (teléfono, correo electrónico). -->
+                </div>
+                <div class="item10">
+                    <h4>Reportar problema</h4>
+                    <!-- Opción para reportar errores técnicos en la plataforma, con espacio para agregar capturas de pantalla o descripciones detalladas. -->
+                </div>
             </div>
         </div>
     </main>
-    <script src="/src/main/resources/static/estudiantes.js"></script>
+    <div class="fondo-apartados-grid">
+        <span class="cerrar-fondo-apartados-grid">X</span>
+        <div class="contenedor-apartados-grid"></div>
+    </div>
+    <script src="/src/main/resources/static/js/estudiantes.js"></script>
 </body>
 
 </html>
