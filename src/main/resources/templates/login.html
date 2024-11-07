@@ -5,78 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/src/main/resources/static/css/login.css">
+    <link rel="stylesheet" href="../static/login.css">
     <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
 </head>
 
 <body>
     <div id="login-container" class="container">
-        <form action="" method="post">
-            <h2>INICIO DE SESIÓN</h2>
-            <div class="form">
-                <label for="cargo">
-                    <i class="ph ph-list"></i>
-                    Cargo:
-                </label>
-                <select name="cargo" class="form-control" id="cargo" required>
-                    <option value="" disabled selected>Seleccione su Cargo</option>
-                    <option value="est">Estudiante</option>
-                    <option value="doc">Docente</option>
-                    <option value="acu">Acudiente</option>
-                    <option value="sec">Secretaria Académica</option>
-                    <option value="coordi">Coordinador Académico</option>
-                    <option value="rect">Rector</option>
-                </select>
-                <label for="username">
-                    <i class="ph ph-user"></i>
-                    Nombre de usuario:
-                </label>
-                <input type="text" id="username" class="form-control" placeholder="Ingrese el usuario" required>
+        <div class="background-container">
+            <form action="" method="post">
+                <h1>INICIO DE SESIÓN</h1>
+                <hr>
+                <div class="form">
+                    <label for="cargo">
+                        <i class="ph ph-list"></i>
+                        Cargo:
+                    </label>
+                    <select name="cargo" class="form-control" id="cargo" required>
+                        <option value="" disabled selected>Seleccione su Cargo</option>
+                        <option value="est">Estudiante</option>
+                        <option value="doc">Docente</option>
+                        <option value="acu">Acudiente</option>
+                        <option value="sec">Secretaria Académica</option>
+                        <option value="coordi">Coordinador Académico</option>
+                    </select>
+                    <label for="username">
+                        <i class="ph ph-user"></i>
+                        Nombre de usuario:
+                    </label>
+                    <input type="text" id="username" class="form-control" placeholder="Ingrese el usuario" required>
 
-                <label for="password">
-                    <i class="ph ph-lock-key"></i>
-                    Contraseña:
-                </label>
-                <input type="password" id="password" class="form-control" placeholder="Ingrese la contraseña" required>
-                <div class="show">
-                    <input type="checkbox" onclick="VerContraseña()" class="mostrar-contraseña">
-                    <label for="mostrar-contraseña">Ver Contraseña</label>
+                    <label for="password">
+                        <i class="ph ph-lock-key"></i>
+                        Contraseña:
+                    </label>
+                    <input type="password" id="password" class="form-control" placeholder="Ingrese la contraseña"
+                        required>
+                    <div class="show">
+                        <input type="checkbox" onclick="VerContraseña()" class="mostrar-contraseña">
+                        <label for="mostrar-contraseña">Mostrar Contraseña</label>
+                    </div>
+                    <button type="submit" class="btn">INGRESAR</button>
                 </div>
-                <button type="submit" class="btn">INGRESAR</button>
-            </div>
-            <div class="footer">
-                <p>¿Olvidaste tu contraseña? <a href="#" onclick="RecuperarContraseña()">Recuperar</a></p>
-            </div>
-        </form>
+                <div class="footer">
+                    <p>¿Olvidaste tu contraseña? <a href="#" onclick="RecuperarContraseña()">Recuperar</a></p>
+                </div>
+            </form>
+        </div>
+
+        <div id="Recuperar-cuenta" class="container">
+            <form class="user">
+                <h2>CUENTA DE USUARIO</h2>
+                <div class="form">
+                    <label for="user">
+                        <i class='bx bxs-user'></i>
+                        Nombre de usuario
+                    </label>
+                    <input type="text" id="user" placeholder="Ingrese su Nombre" required>
+                    <button type="button" onclick="buscarusuario" class="btn">CONSULTAR</button>
+                </div>
+            </form>
+
+            <h2>RECUPERAR CUENTA</h2>
+            <form class="email">
+                <div class="form">
+                    <label for="email">
+                        <i class='bx bxs-envelope'></i>
+                        Correo electrónico:
+                    </label>
+                    <input type="email" id="email" readonly>
+                    <button type="submit" class="btn">ENVIAR</button>
+                </div>
+            </form>
+        </div>
     </div>
-
-    <div id="Recuperar-cuenta" class="container">
-        <form class="user">
-            <h2>CUENTA DE USUARIO</h2>
-            <div class="form">
-                <label for="user">
-                    <i class='bx bxs-user'></i>
-                    Nombre de usuario
-                </label>
-                <input type="text" id="user" placeholder="Ingrese su Nombre" required>
-                <button type="button" onclick="buscarusuario" class="btn">CONSULTAR</button>
-            </div>
-        </form>
-
-        <h2>RECUPERAR CUENTA</h2>
-        <form class="email">
-            <div class="form">
-                <label for="email">
-                    <i class='bx bxs-envelope'></i>
-                    Correo electrónico:
-                </label>
-                <input type="email" id="email" readonly>
-                <button type="submit" class="btn">ENVIAR</button>
-            </div>
-        </form>
-    </div>
-
-    <script src="/src/main/resources/static/js/login.js"></script>
+    <script src="../static/login.js"></script>
 </body>
 
 </html>
