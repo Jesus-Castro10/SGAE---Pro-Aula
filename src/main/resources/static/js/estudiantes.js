@@ -66,17 +66,16 @@ let contenedor = document.querySelector('.contenedor-apartados-grid');
 apartadosGrid.forEach(apartado => {
     apartado.addEventListener('click', () => {
         fondoApartados.style.display = 'block';
-        apartado.style.overflowY = 'auto';
-        apartado.style.overflowX = 'auto';
         apartado.style.perspective = '1000000px';
         let copiaApartado = apartado.cloneNode(true);
+        copiaApartado.style.justifyItems = 'left';
+        copiaApartado.style.overflowY = 'auto';
+        copiaApartado.style.overflowX = 'auto';
         copiaApartado.removeEventListener('click', null);
         copiaApartado.style.cursor = 'default';
         contenedor.appendChild(copiaApartado);
     });
     cerrar.addEventListener('click', () => {
-        apartado.style.overflowY = 'hidden';
-        apartado.style.overflowX = 'hidden';
         contenedor.innerHTML = '';
         fondoApartados.style.display = 'none';
     });
