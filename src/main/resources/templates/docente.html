@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/docente.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Docente</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="#" onclick="carruselBotones(0)" class="navbar-cuenta">Cuenta</a>
+            <a href="#" onclick="carruselBotones(1)" class="navbar-estudiante">Docente</a>
+            <a href="#" onclick="carruselBotones(2)" class="navbar-calificacion">Calificacion</a>
+            <a href="#" onclick="carruselBotones(3)" class="navbar-soporte">Soporte</a>
+            <div class="slider"></div>
+        </nav>
+        <div class="titulo-perfil-academico">
+            <div class="titulo-perfil-academico-izquierda">
+                <i class="ph ph-push-pin pin"></i>
+                <i class="ph ph-student estudiante"></i>
+                <h2>Nombre Docente</h2>
+            </div>
+            <h1 class="titulo-perfil-academico-medio">Perfil academico</h1>
+            <h2 class="titulo-perfil-academico-derecha">Maestria</h2>
+            <img src="sentada2.png" class="titulo-perfil-academico-img">
+        </div>
+    </header>
+    <main>
+        <div class="carrusel">
+                    <!-- SESION CUENTA -->
+            <div class="grid-container">
+                <div class="item1">
+                    <h4>Cambiar contraseña</h4>
+                    
+                        <i class="ph-duotone ph-lock-key cuenta-sticker-opciones"></i>
+                    
+                    <div class="contenedor-cambiar-contraseña">
+                        <h4>Cambiar contraseña</h4>
+                        <p class="obligacion-contraseña">La contraseña debe contener al menos 8 caracteres</p>
+                        <form method="post" class="formulario-cambiar-contraseña">
+                            <input type="password" placeholder="Contraseña actual" minlength="8" required>
+                            <input type="password" placeholder="Contraseña nueva" minlength="8" required>
+                            <input type="password" placeholder="Repetir contraseña nueva" minlength="8" required>
+                            <button>Cambiar Contraseña</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="item2">
+                    <h4>Cerrar sesión</h4>
+                    <i class="ph-duotone ph-sign-out cuenta-sticker-opciones"></i>
+                    <div class="contenedor-cerrar-sesion">
+                        <h4>¿Salir de la sesión?</h4>
+                        <button class="boton-no-cerrar-sesion">No</button>
+                        <button class="boton-si-cerrar-sesion">Sí</button>
+                    </div>
+                </div>
+            </div>
+                    <!-- SESION DOCENTE -->
+            <div class="grid-container">
+                
+            </div>
+            <!-- SESION CALIFICACION-->
+            <div class="grid-container">
+                    <div class="registrar-calificacion">
+                        <h2>REGISTRAR CALIFICACION</h2>
+                        <div class="select">
+                        <label for="select-asignatura">Asignatura</label>
+                        <select class="select-asignatura">
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="">Matematica</option>
+                            <option value="">Castellano</option>
+                            <option value="">Biologia</option>
+                            <option value="">Ingles</option>
+                            <option value="">Etica</option>         
+                        </select>
+                        <label for="select-grado">Grado academico</label>
+                        <select class="select-grado">
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="grado ">6 grado </option>
+                            <option value="grado">7 grado </option>
+                            <option value="grado">8 grado </option>
+                            <option value="grado">8 grado </option>
+                            <option value="grado">10 grado </option>
+                            <option value=" grado">11 grado </option>       
+                        </select>
+                        <label for="select-aula">Aula</label>
+                        <select class="select-aula">
+                            <option value="" disabled selected>Seleccionar</option>
+                            <option value="aula">1</option>
+                            <option value="aula">2</option>
+                            <option value="aula">3</option>
+                            <option value="aula">4</option>      
+                        </select>
+
+                        <button><i class="ph ph-magnifying-glass"></i></button>
+                    </div>
+                        <div class="container-registrar-asigntura">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Nombre de estudiante</th>
+                                    <th>Asignatura</th>
+                                    <th>FLL</th>
+                                    <th>per. 1</th>
+                                    <th>per. 2</th>
+                                    <th>per.3 </th>
+                                    <th>promedio</th>
+                                    <th>Registrar</th>
+                                    <th>Modificar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr> 
+                                <td>1</td>
+                                <td>DAIMER SALTAREN</td> 
+                                <td>MATEMATICA</td> 
+                                <td><input type="number" class="fallas" ></td> 
+                                <td><input type="number" class="notas-1" min="0" max="5"></td> 
+                                <td><input type="number" class="notas-2" min="0" max="5"></td> 
+                                <td><input type="number" class="notas-3" min="0" max="5"></td> 
+                                <td><input type="number" class="promedio" placeholder="=" readonly></td> 
+                                <td><button onclick="registrarcalificacion(this)" class="guardar"> Guardar <i class="ph ph-notepad"></i></button>
+                                <span class="error-msg" id="error-msg"></span>
+                                </td>
+                                <td><button onclick="modificarcampos(this)"class="modificar">Modificar <i class="ph ph-pencil-simple-line"></i></button></td>
+
+                            </tr> 
+                            <tr> 
+                                <td>2</td>
+                                <td>MARIA GOMEZ</td>
+                                <td>HISTORIA</td>
+                                 <td><input type="number" class="fallas"></td> 
+                                 <td><input type="number" class="notas-1" min="0" max="5"></td> 
+                                 <td><input type="number" class="notas-2" min="0" max="5"></td> 
+                                 <td><input type="number" class="notas-3"min="0" max="5"></td> 
+                                 <td><input type="number" class="promedio" placeholder="=" readonly></td> 
+                                 <td><button onclick="registrarcalificacion(this)" class="guardar"> Guardar <i class="ph ph-notepad"></i></button>
+                                <span class="error-msg" id="error-msg"></span>
+                                </td>
+                                 <td><button onclick="modificarcampos(this)"class="modificar">Modificar <i class="ph ph-pencil-simple-line"></i></button></td>
+                    
+
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    </div>            
+                </div>
+<!-- SESION PARASOPORTE -->
+            <div class="grid-container">
+                <div class="item8">
+                    <h4>Preguntas frecuentes</h4>
+                </div>
+                <div class="item9">
+                    <h4>Contactar</h4>
+                    <!-- (teléfono, correo electrónico). -->
+                </div>
+                <div class="item10">
+                    <h4>Reportar problema</h4>
+                    <!-- Opción para reportar errores técnicos en la plataforma, con espacio para agregar capturas de pantalla o descripciones detalladas. -->
+                </div>
+            </div> 
+        </div>
+    </main>
+    <div class="fondo-apartados-grid">
+        <span class="cerrar-fondo-apartados-grid">X</span>
+        <div class="contenedor-apartados-grid"></div>
+    </div>
+    <script src="../static/docente.js"></script>
+</body>
+</html>
+
