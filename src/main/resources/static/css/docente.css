@@ -1,32 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
-
-* {
+*{
     margin: 0;
     padding: 0;
     font-family: "Ubuntu", sans-serif;
 }
-
-body {
+body{
     background-color: #B2C8BE;
     position: relative;
     height: 100vh;
-    display: block;
 }
-
-header {
+header{
     display: flex;
     flex-direction: column;
     text-align: center;
-
-
+    align-items: center;
 }
-
-main {
+main{
     width: 100%;
     overflow: hidden;
 }
-
-.navbar {
+.navbar{
     position: relative;
     display: flex;
     background-color: #F2EFE3;
@@ -37,8 +30,7 @@ main {
     font-size: 1.3rem;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
 }
-
-a {
+a{
     text-decoration: none;
     color: #284353;
     border-radius: 5rem;
@@ -48,29 +40,25 @@ a {
     width: 100%;
     height: 100%;
     margin: 0;
-}
-
-a:hover {
-    background-color: #efb2b8;
     transition: all .3s ease;
 }
-
-.navbar-estudiante {
+a:hover{
+    background-color: #efb2b8;
+}
+.navbar-estudiante{
     color: #FBF2EE;
 }
-
-.slider {
+.slider{
     position: absolute;
     height: 100%;
-    width: 25%;
+    width: 33.33%;
     top: 0;
-    left: 25%;
+    left: 33.33%;
     background-color: #F38994;
     border-radius: 5rem;
     transition: all 0.3s ease;
 }
-
-.titulo-perfil-academico {
+.titulo-perfil-academico{
     position: relative;
     display: flex;
     color: #F6F7FF;
@@ -81,184 +69,78 @@ a:hover {
     margin: 0 5% 0 5%;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
 }
-
-.titulo-perfil-academico-izquierda {
+.titulo-perfil-academico-izquierda{
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     align-items: center;
+    padding-left: 1rem;
     width: 100%;
     height: 100%;
 }
-
-.pin {
-    color: #FF7B93;
-    font-size: 2rem;
+.titulo-perfil-academico-izquierda span{
+    font-size: 4rem;
 }
-
-.estudiante {
-    color: #FAE9CF;
-    font-size: 2rem;
+.titulo-perfil-academico-izquierda span:first-child{
+    color: #FE7A94;
 }
-
-.titulo-perfil-academico-medio,
-.titulo-perfil-academico-derecha {
+.titulo-perfil-academico-izquierda span:nth-child(2){
+    color: #F8E8CE;
+}
+.pin{
+    left: 18%;
+    position: absolute;
+    top: -1.5rem;
+    font-size: 3rem;
+    color: #F98A96;
+}
+.titulo-perfil-academico-medio, .titulo-perfil-academico-derecha{
     align-content: center;
     width: 100%;
     height: 100%;
 }
-
-.titulo-perfil-academico-img {
+.titulo-perfil-academico-img{
     position: absolute;
     right: 5%;
     top: -6rem;
     height: 8rem;
 }
-
-.carrusel {
+.carrusel{
     display: flex;
     transition: transform 0.5s ease;
     padding: 1rem 0 1rem 0;
 }
-
-/* estilos de registro de notas */
-
-.-containerregistrar-calificacion {
-    display: flex;
-    justify-content: center;
-}
-
-.registrar-calificacion {
-    align-items: center;
-    display: flex;
-    background-color: #F8EFE0;
-    cursor: pointer;
-    font-size: 1.5rem;
-    color: #223E65;
-    transition: all .3s ease;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-    border-radius: 1rem;
-}
-
-.registrar-calificacion select {
-    text-align: center;
-    border-radius: 1rem;
-    border-color: black;
-    width: 5rem;
-    margin-right: 1rem;
-    height: 1.5rem;
-    overflow: hidden;
-    padding: 0.1 rem;
-
-}
-
-.registrar-calificacion table {
-
-    width: 100%;
-    background-color: #D7D5C8;
-    margin-top: 2rem;
-    justify-content: center;
-    border-radius: 1rem;
-    border-color: #223E65;
-    border: 1px solid;
-    overflow: auto;
-    border: 1px solid #ccc;
-
-}
-
-input[type=number] {
-
-    border-radius: 1rem;
-    border-width: 0.1rem;
-    padding: 0.2rem;
-    border-color: #223E65;
-    width: 60px;
-    text-align: center;
-    padding: 1.5 px;
-    margin: 2px;
-}
-
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-
-button {
-    text-align: center;
-    border-radius: 0.5rem;
-    width: auto;
-    height: 1.5rem;
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 15px;
-    background-color: #223E65;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-
-
-}
-
-button i {
-    color: white;
-    padding: 0.1rem;
-}
-
-button.guardar:hover {
-    background-color: rgb(67, 214, 67);
-}
-
-button.modificar:hover {
-
-    background-color: rgb(228, 72, 72);
-
-}
-/* fin del registro */
-
-.item1 {
+.item1{
     grid-area: cambiar-contraseña;
 }
-
-.item2 {
+.item2{
     grid-area: cerrar-sesion;
 }
-
-.item3 {
+.item3{
     grid-area: foto-estudiante;
 }
-
-.item4 {
+.item4{
     grid-area: perfil-estudiante;
 }
-
-.item5 {
+.item5{
     grid-area: horarios;
 }
-
-.item6 {
+.item6{
     grid-area: resultados-academicos;
 }
-
-.item7 {
+.item7{
     grid-area: historial-academico;
 }
-
-.item8 {
+.item8{
     grid-area: preguntas-frecuentes;
 }
-
-.item9 {
+.item9{
     grid-area: informacion-soporte;
 }
-
-.item10 {
+.item10{
     grid-area: reportar-problema;
 }
-
-.grid-container {
+.grid-container{
     flex-shrink: 0;
     width: 90%;
     height: 100%;
@@ -268,61 +150,51 @@ button.modificar:hover {
     gap: 1.5rem;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .4));
 }
-
-.grid-container:first-child {
-    grid-template-areas:
+.grid-container:first-child{
+    grid-template-areas: 
         'cambiar-contraseña cerrar-sesion'
     ;
 }
-
-.grid-container:nth-child(2) {
-    grid-template-areas:
-        'foto-estudiante resultados-academicos resultados-academicos resultados-academicos perfil-estudiante'
-        'horarios resultados-academicos resultados-academicos resultados-academicos perfil-estudiante'
-        'horarios historial-academico historial-academico historial-academico perfil-estudiante'
-        'horarios historial-academico historial-academico historial-academico perfil-estudiante'
+.grid-container:nth-child(2){
+    grid-template-areas: 
+    'foto-estudiante resultados-academicos resultados-academicos resultados-academicos perfil-estudiante'
+    'horarios resultados-academicos resultados-academicos resultados-academicos perfil-estudiante'
+    'horarios historial-academico historial-academico historial-academico perfil-estudiante'
+    'horarios historial-academico historial-academico historial-academico perfil-estudiante'
     ;
 }
-
-.grid-container:last-child {
+.grid-container:last-child{
     grid-template-areas:
-        'preguntas-frecuentes preguntas-frecuentes preguntas-frecuentes informacion-soporte'
-        'preguntas-frecuentes preguntas-frecuentes preguntas-frecuentes informacion-soporte'
-        'reportar-problema reportar-problema reportar-problema informacion-soporte'
+    'preguntas-frecuentes preguntas-frecuentes preguntas-frecuentes informacion-soporte'
+    'preguntas-frecuentes preguntas-frecuentes preguntas-frecuentes informacion-soporte'
+    'reportar-problema reportar-problema reportar-problema informacion-soporte'
     ;
 }
-
-.contenedor-cambiar-contraseña,
-.contenedor-cerrar-sesion {
+.contenedor-cambiar-contraseña, .contenedor-cerrar-sesion{
     display: none;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .2));
     border-radius: 1rem;
     background-color: #DCE0D5;
     padding: 1rem;
-    text-align: center;
+    text-align:  center;
 }
-
-.contenedor-cerrar-sesion {
+.contenedor-cerrar-sesion{
     padding: 3rem;
 }
-
-.cuenta-sticker-opciones {
+.cuenta-sticker-opciones{
     font-size: 15rem;
 }
-
-.contenedor-cambiar-contraseña p {
+.contenedor-cambiar-contraseña p{
     margin-top: .5rem;
     font-size: 1rem;
 }
-
-.formulario-cambiar-contraseña {
+.formulario-cambiar-contraseña{
     padding: 1rem;
     display: flex;
     flex-direction: column;
     row-gap: 1rem;
 }
-
-.formulario-cambiar-contraseña input {
+.formulario-cambiar-contraseña input{
     background-color: #EDEAE0;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .1));
     color: #5D828A;
@@ -331,9 +203,7 @@ button.modificar:hover {
     padding: 1rem;
     font-size: 1rem;
 }
-
-.formulario-cambiar-contraseña button,
-.contenedor-cerrar-sesion button {
+.formulario-cambiar-contraseña button, .contenedor-cerrar-sesion button{
     padding: 1rem;
     border-radius: 1rem;
     border: none;
@@ -343,32 +213,17 @@ button.modificar:hover {
     font-size: 1rem;
     transition: all .3s ease;
 }
-
-.contenedor-cerrar-sesion button {
+.contenedor-cerrar-sesion button{
     margin: .5rem .2rem 0 .2rem;
     padding: 1rem 2rem 1rem 2rem;
 }
-
-.formulario-cambiar-contraseña button:hover,
-.boton-no-cerrar-sesion:hover {
+.formulario-cambiar-contraseña button:hover, .boton-no-cerrar-sesion:hover{
     background-color: #92C7D0;
 }
-
-.boton-si-cerrar-sesion:hover {
+.boton-si-cerrar-sesion:hover{
     background-color: #E85975;
 }
-
-.item1,
-.item2,
-.item3,
-.item4,
-.item5,
-.item6,
-.item7,
-.item8,
-.item9,
-.item10,
-.contenedor-apartados-grid {
+.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10, .contenedor-apartados-grid{
     background-color: #F8EFE0;
     border-radius: 1rem;
     cursor: pointer;
@@ -380,75 +235,52 @@ button.modificar:hover {
     align-items: center;
     overflow: hidden;
     padding: 1rem;
-    position: relative;
     backface-visibility: hidden;
+    position: relative;
 }
-
-.item3 {
+.item3{
     padding: 0;
     max-height: 25vh;
 }
-
-.item4 {
+.item4{
     max-height: 66vh;
 }
-
-.item5 {
+.item5{
     max-height: 40vh;
-}
-
-.item6 {
+} 
+.item6{
     max-height: 25vh;
 }
-
-.item7 {
+.item7{
     max-height: 35vh;
-    backface-visibility: hidden
 }
-
-.item1:hover,
-.item2:hover,
-.item3:hover,
-.item4:hover,
-.item5:hover,
-.item6:hover,
-.item7:hover,
-.item8:hover,
-.item9:hover,
-.item10:hover {
+.item1:hover, .item2:hover, .item3:hover, .item4:hover, .item5:hover, .item6:hover, .item7:hover, .item8:hover, .item9:hover, .item10:hover{
     transform: scale(1.02);
 }
-
-.item3 .contenedor-tablas-main {
+.item3 .contenedor-tablas-main{
     border: none;
     margin: 0;
     background-color: transparent;
 }
-
-.img-grid {
+.img-grid{
     width: 15rem;
 }
-
-.informacion-top-puntos {
+.informacion-top-puntos{
     position: absolute;
     top: -5px;
     left: 3%;
     font-size: 2rem;
 }
-
-.informacion-top-puntos span:first-child {
+.informacion-top-puntos span:first-child{
     color: #F82E2B;
 }
-
-.informacion-top-puntos span:nth-child(2) {
+.informacion-top-puntos span:nth-child(2){
     color: #B28D21;
 }
-
-.informacion-top-puntos span:last-child {
+.informacion-top-puntos span:last-child{
     color: #539279;
 }
-
-.informacion-top {
+.informacion-top{
     top: 5%;
     width: 100%;
     position: absolute;
@@ -459,20 +291,17 @@ button.modificar:hover {
     padding: .5rem 0 .5rem 0;
     color: #F7F5F6;
 }
-
-.item4 .contenedor-tablas-main {
+.item4 .contenedor-tablas-main{
     margin-top: 4rem;
 }
-
-.contenedor-datos {
+.contenedor-datos{
     display: flex;
     flex-direction: column;
     row-gap: .5rem;
     width: 100%;
     text-align: left;
 }
-
-.contenedor-datos h4 {
+.contenedor-datos h4{
     width: 100%;
     background-color: #B9C2BF;
     border: 1px solid #8E897F;
@@ -480,8 +309,7 @@ button.modificar:hover {
     border-left: none;
     padding-left: .3rem;
 }
-
-.contenedor-apartados-informacion-personal-span {
+.contenedor-apartados-informacion-personal-span{
     display: flex;
     flex-direction: column;
     border: 1px solid #8E897F;
@@ -490,9 +318,7 @@ button.modificar:hover {
     border-radius: .5rem;
     padding: .5rem .5rem .5rem .5rem;
 }
-
-.contenedor-apartados-informacion-personal,
-.contenedor-apartados-informacion-contacto {
+.contenedor-apartados-informacion-personal, .contenedor-apartados-informacion-contacto{
     display: flex;
     flex-direction: column;
     font-size: 1rem;
@@ -500,8 +326,7 @@ button.modificar:hover {
     padding: 1rem;
     border-radius: 1rem;
 }
-
-.color-fondo-horario {
+.color-fondo-horario{
     background-color: #FB8690;
     width: 100%;
     height: 18%;
@@ -511,8 +336,7 @@ button.modificar:hover {
     text-align: center;
     margin-bottom: 4rem;
 }
-
-.c {
+.c{
     position: absolute;
     color: #414652;
     z-index: 1;
@@ -520,42 +344,37 @@ button.modificar:hover {
     top: -1.7rem;
     font-size: 3rem;
 }
-
-.item5 .contenedor-tablas-main {
+.item5 .contenedor-tablas-main{
     border: 1px solid #8E9587;
+    margin-top: 2rem;
 }
-
-.item5 h4 {
+.item5 h4{
     color: #FCF6F1;
     z-index: 1;
 }
-
-.contenedor-tablas-main {
+.contenedor-tablas-main{
     width: 100%;
     overflow: hidden;
-    background-color: #D7D5C8;
     justify-items: center;
     border-radius: 1rem;
     border: 1px solid;
     margin-top: 1rem;
     transition: transform .5s ease;
-
 }
-
-.contenedor-tabla-historial-academico-titulo {
+.contenedor-tabla-historial-academico-titulo{
     display: flex;
     width: 100%;
     justify-content: center;
     align-items: center;
     gap: 2rem;
 }
-
-.contenedor-tabla-historial-academico-titulo-derecha {
+.contenedor-tabla-historial-academico-titulo-derecha{
     display: flex;
     gap: .2rem;
+    justify-content: right;
+    padding-right: .5rem;
 }
-
-.contenedor-tabla-historial-academico-titulo-derecha select {
+.contenedor-tabla-historial-academico-titulo-derecha select{
     border: none;
     border-radius: 0.4rem;
     background-color: transparent;
@@ -563,64 +382,111 @@ button.modificar:hover {
     cursor: pointer;
     transition: transform .5s ease;
 }
-
-.contenedor-tablas-main:hover,
-.contenedor-tabla-historial-academico-titulo-derecha select:hover {
-    background-color: #cac7b9;
+.item4  .contenedor-tablas-main:hover, .contenedor-tabla-historial-academico-titulo-derecha select:hover{
+    background-color: #f3f1ed;
 }
-
-table {
+.contenedor-tabla-calificaciones-periodo{
+    width: 100%;
+    display: flex;
+    text-align: center;
+}
+.contenedor-tabla-calificaciones-periodo span:nth-child(odd){
+    width: 5%;
+    cursor: pointer;
+}
+.contenedor-tabla-calificaciones-periodo span:nth-child(2){
+    width: 90%;
+}
+table{
     width: max-content;
     text-align: center;
 }
-
-.tabla-horario {
+.tabla-horario{
     border-collapse: collapse;
 }
-
-td,
-th {
+td, th{
     padding: 0.5rem .5rem 0.5rem .5rem;
     font-size: 1rem;
+    word-wrap: break-word;
 }
-
-.tabla-horario th {
+.tabla-horario th{
     background-color: #BECBC2;
 }
-
-.tabla-horario th,
-.tabla-horario td {
+.tabla-horario th, .tabla-horario td{
     border: 1px solid #9B9583;
 }
-
-.tabla-horario tr td:not(:first-child) {
+.tabla-horario tr td:not(:first-child){
     background-color: #DFD7C3;
     color: #413B39;
 }
-
-.tabla-horario tr td:first-child {
+.tabla-horario tr td:first-child{
     color: #DDDED7;
 }
-
-.tabla-resultado-academico {
+.tabla-resultado-academico, .tabla-historial-academico{
     width: 100%;
     background-color: #FFFFFF;
     color: #010F3F;
     border-collapse: collapse;
 }
-
-.tabla-resultado-academico,
-.tabla-resultado-academico th,
-.tabla-resultado-academico td {
-    border: 1px solid #237CBA;
+.tabla-resultado-academico, .tabla-historial-academico, .tabla-resultado-academico th, .tabla-historial-academico th, .tabla-resultado-academico td, .tabla-historial-academico td{
+    border: 2px solid #237CBA;
 }
-
-.tabla-resultado-academico th {
+.tabla-resultado-academico th, .tabla-historial-academico th{
     background-color: #7EBAF7;
 }
-
-.fondo-apartados-grid {
-    position: absolute;
+.contenedor-tablas-main:last-child{
+    background-color: #FFFFFF;
+}
+.tabla-historial-academico-encabezado th, .tabla-historial-academico-encabezado-2 tr:first-child td:last-child{
+    background-color: #FFFFFF;
+}
+.tabla-historial-academico-encabezado tr:first-child th:first-child{
+    width: 5rem;
+}
+.tabla-historial-academico-encabezado-2 tr:nth-child(odd) td{
+    background-color: #7EBAF7;
+} 
+.tabla-historial-academico-encabezado-2 tr:first-child td:last-child{
+    padding: 0;
+}
+.tabla-historial-academico-encabezado-2-img-1{
+    max-width: 5rem;
+    max-height: 5rem;
+}
+.tabla-historial-academico-encabezado-2-img-2{
+    max-width: 5rem;
+    max-height: 10rem;
+}
+.contenedor-tablas-main:last-child tbody input{
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    border: none;
+    text-align: center;
+    padding: 0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.tabla-historial-academico-encabezado tr th:last-child{
+    color: #000000;
+}
+tfoot tr:first-child td{
+    text-align: left;
+}
+.contenedor-firmas{
+    padding: 1rem;
+    display: flex;
+    gap: 5rem;
+    font-size: 1rem;
+    text-align: center;
+    justify-self: center;
+    margin: 2rem 0 2rem 0;
+}
+.fondo-apartados-grid{
+    position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
@@ -629,8 +495,7 @@ th {
     backdrop-filter: blur(1px);
     display: none;
 }
-
-.cerrar-fondo-apartados-grid {
+.cerrar-fondo-apartados-grid{
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -641,41 +506,155 @@ th {
     border-radius: .5rem;
     transition: all .3s ease;
 }
-
-.cerrar-fondo-apartados-grid:hover {
+.cerrar-fondo-apartados-grid:hover{
     background-color: rgba(186, 203, 193, 1);
     color: #b81d2d;
 }
-
-.contenedor-apartados-grid {
+.contenedor-apartados-grid{
     cursor: default;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     max-height: 85vh;
+    max-width: 75vw;
 }
-
-::-webkit-scrollbar {
+::-webkit-scrollbar{
     width: 12px;
     height: 10px;
 }
-
-::-webkit-scrollbar-track {
+::-webkit-scrollbar-track{
     border: 1px solid #010F3F;
     background-color: #FFFFFF;
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
     border: 1px solid #010F3F;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: #010F3F;
     border: 2px solid #f0f0f0;
     border-top-right-radius: 5rem;
     border-bottom-right-radius: 5rem;
 }
-
 ::-webkit-scrollbar-thumb:hover {
     background-color: #7EBAF7;
+}
+@media(max-width: 980px){
+    .grid-container{
+        padding: 1rem 0;
+    }
+    .grid-container:nth-child(2){
+        grid-template-areas: 
+        'foto-estudiante foto-estudiante perfil-estudiante'
+        'horarios horarios perfil-estudiante'
+        'horarios horarios perfil-estudiante'
+        'resultados-academicos resultados-academicos resultados-academicos'
+        'historial-academico historial-academico historial-academico'
+        'historial-academico historial-academico historial-academico'
+        ;
+    }
+    .contenedor-firmas{
+        flex-direction: column;
+        padding-top: 1rem;
+        margin-top: 2rem;
+    }
+    .contenedor-tabla-historial-academico-titulo-derecha{
+        justify-content: center;
+        margin-left: 1rem;
+    }
+    .grid-container{
+        height: 70vh;
+        overflow-y: auto;
+    }
+    .grid-container::-webkit-scrollbar{
+        width: 1px;
+        height: 1px;
+    }
+    .grid-container::-webkit-scrollbar-track{
+        border: none;
+        background-color: transparent;
+        border: none;
+    }
+    .grid-container::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border: none;
+    }
+    .grid-container::-webkit-scrollbar-thumb:hover {
+        background-color: transparent;
+    }
+    .item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, .item9, .item10{
+        height: max-content;
+    }
+}
+@media(max-width: 768px){
+    .contenedor-tablas-main::-webkit-scrollbar{
+        width: 1px;
+        height: 1px;
+    }
+    .contenedor-tablas-main::-webkit-scrollbar-track{
+        border: none;
+        background-color: transparent;
+        border: none;
+    }
+    .contenedor-tablas-main::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border: none;
+    }
+    .contenedor-tablas-main::-webkit-scrollbar-thumb:hover {
+        background-color: transparent;
+    }
+    .contenedor-tablas-main{
+
+    }
+}
+@media(max-width: 705px){
+    .contenedor-apartados-grid{
+        left: 45%;
+    }
+}
+@media(max-width: 580px){
+    .navbar{
+        width: 70%;
+    }
+    .pin{
+        display: none;
+    }
+    .grid-container:first-child{
+        grid-template-areas: 
+        'cambiar-contraseña'
+        'cerrar-sesion'
+        ;
+    }
+    .grid-container:nth-child(2){
+        grid-template-areas: 
+        'foto-estudiante'
+        'perfil-estudiante'
+        'horarios'
+        'resultados-academicos'
+        'historial-academico'
+        'historial-academico'
+    }
+    .grid-container:last-child{
+        grid-template-areas:
+        'preguntas-frecuentes'
+        'informacion-soporte'
+        'reportar-problema'
+        ;
+    }
+    .titulo-perfil-academico-img{
+        display: none;
+    }
+    .titulo-perfil-academico-izquierda span{
+        display: none;
+    }
+}
+@media(max-width: 472px){
+    .navbar{
+        width: 90%;
+    }
+    .contenedor-apartados-grid{
+        left: 50%;
+        top: 55%;
+        max-height: 70vh;
+    }
 }
