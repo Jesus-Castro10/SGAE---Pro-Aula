@@ -62,11 +62,13 @@ let apartadosGrid = document.querySelectorAll('.contenedor-tablas-main');
 let fondoApartados = document.querySelector('.fondo-apartados-grid');
 let cerrar = document.querySelector('.cerrar-fondo-apartados-grid');
 let contenedor = document.querySelector('.contenedor-apartados-grid');
+let seleccionarAño = document.querySelector('.contenedor-tabla-historial-academico-titulo-derecha select');
 
 apartadosGrid.forEach(apartado => {
     apartado.addEventListener('click', () => {
         fondoApartados.style.display = 'block';
         apartado.style.perspective = '1000000px';
+        seleccionarAño.disabled = false;
         let copiaApartado = apartado.cloneNode(true);
         copiaApartado.style.justifyItems = 'left';
         copiaApartado.style.overflowY = 'auto';
@@ -78,6 +80,7 @@ apartadosGrid.forEach(apartado => {
     cerrar.addEventListener('click', () => {
         contenedor.innerHTML = '';
         fondoApartados.style.display = 'none';
+        seleccionarAño.disabled = true;
     });
 });
 
