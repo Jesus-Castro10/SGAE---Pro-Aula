@@ -434,6 +434,9 @@ td, th{
 .tabla-resultado-academico th, .tabla-historial-academico th{
     background-color: #7EBAF7;
 }
+.tabla-historial-academico th, .tabla-historial-academico td{
+    width: 10rem;
+}
 .contenedor-tablas-main:last-child{
     background-color: #FFFFFF;
 }

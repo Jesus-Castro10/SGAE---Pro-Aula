@@ -371,7 +371,6 @@ a:hover{
 .contenedor-tabla-historial-academico-titulo-derecha{
     display: flex;
     gap: .2rem;
-    
     justify-content: right;
     padding-right: .5rem;
 }
@@ -410,6 +409,20 @@ td, th{
 }
 .tabla-horario tr td:first-child{
     color: #DDDED7;
+}
+.contenedor-flechas-periodos{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+.contenedor-flechas-periodos span, .contenedor-flechas-periodos h3{
+    width: 100%;
+}
+.contenedor-flechas-periodos span{
+    font-size: 2rem;
+}
+.contenedor-flechas-periodos span:hover {
+    background-color: #f3f1ed;
 }
 .tabla-resultado-academico, .tabla-historial-academico{
     width: 100%;
